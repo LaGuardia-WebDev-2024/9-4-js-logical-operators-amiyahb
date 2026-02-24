@@ -12,9 +12,16 @@ draw = function() {
     fill(0, 0, 0);
     textSize(30);
     text("Press me!", 145, 115);
+    text("Click Here!", 140, 300);
 
-    if(mousePressed){
-        labelCanvas();
+    if(mousePressed  && mouseY <= 200){
+      fill(255, 0, 68); 
+    rect(0, 0, 400, 200); 
+    }
+
+    if(mousePressed  && mouseY >= 200){
+      fill(0, random(0,255), random(0,255)); 
+    rect(0, 200, 400, 200); 
     }
 };
 
